@@ -370,7 +370,7 @@ player createDiarySubject ["controls","Controls"];
 		[
 			"Weapons", 
 				"
-				A IAA is NEVER allowed to supply civilians with weapons. This will get you banned from the server and removed from being a cop.<br/><br/>
+				A IAA Officer is NEVER allowed to supply civilians with weapons. This will get you banned from the server and removed from being a cop.<br/><br/>
 
 				Legal Weapons for Civilians to carry with a permit:<br/>
 				1. P07<br/>
