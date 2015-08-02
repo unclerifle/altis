@@ -1,14 +1,27 @@
-/*
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Verifies that the ticket was paid.
-*/
-private["_value","_unit","_cop"];
-_value = [_this,0,5,[0]] call BIS_fnc_param;
-_unit = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
-_cop = [_this,2,ObjNull,[ObjNull]] call BIS_fnc_param;
-if(isNull _unit OR {_unit != life_ticket_unit}) exitWith {}; //NO
-if(isNull _cop OR {_cop != player}) exitWith {}; //Double NO
+if(isnil {life_ticket_val} OR isNil {life_ticket_cop}) exitWith {};
+if(life_cash < life_ticket_val) exitWith
+{
+	if(life_atmcash < life_ticket_val) exitWith 
+	{
+		hint "You don't have enough money in your bank account or on you to pay the ticket.";
+		[[1,format["%1 couldn't pay the ticket due to not having enough money.",profileName]],"life_fnc_broadcast",life_ticket_cop,false] spawn life_fnc_MP;
+		closeDialog 0;
+	};
+	hint format["You have paid the ticket of $%1",[life_ticket_val] call life_fnc_numberText];
+	life_atmcash = life_atmcash - life_ticket_val;
+	life_ticket_paid = true;
+	[[0,format["%1 paid the ticket of $%2",profileName,[life_ticket_val] call life_fnc_numberText]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+	closeDialog 0;
+	[[1,format["%1 paid the ticket.",profileName]],"life_fnc_broadcast",life_ticket_cop,false] spawn life_fnc_MP;
+	[[getPlayerUID player],"life_fnc_wantedRemove",false,false] spawn life_fnc_MP;
+	[[[life_ticket_val],{life_atmcash = life_atmcash + (_this select 0);}],"BIS_fnc_call",life_ticket_cop,false] spawn life_fnc_MP;
+};
 
-life_atmcash = life_atmcash + _value;
+life_cash = life_cash - life_ticket_val;
+life_ticket_paid = true;
+
+[[0,format["%1 paid the ticket of $%2",profileName,[life_ticket_val] call life_fnc_numberText]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+closeDialog 0;
+[[1,format["%1 paid the ticket.",profileName]],"life_fnc_broadcast",life_ticket_cop,false] spawn life_fnc_MP;
+[[getPlayerUID player],"life_fnc_wantedRemove",false,false] spawn life_fnc_MP;
+[[[life_ticket_val],{life_atmcash = life_atmcash + (_this select 0);}],"BIS_fnc_call",life_ticket_cop,false] spawn life_fnc_MP;

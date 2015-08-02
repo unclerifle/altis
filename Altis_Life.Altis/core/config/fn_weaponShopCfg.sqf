@@ -83,7 +83,12 @@ switch(_shop) do
 						["optic_Holosight",nil,1200],
 						["optic_Arco",nil,2500],
 						["optic_MRCO",nil,3000],
+						["bipod_01_f_snd",nil,2000],
+						["bipod_02_F_hex",nil,2000],
+						["bipod_03_F_blk",nil,2000],
 						["muzzle_snds_H",nil,2750],
+						["optic_AMS_base",nil,2750],
+						["optic_KHS_base",nil,2750],
 						["30Rnd_65x39_caseless_mag",nil,130],
 						["30Rnd_9x21_Mag",nil,250]
 					]
@@ -118,6 +123,11 @@ switch(_shop) do
 						["optic_Hamr",nil,500],
 						["optic_Arco",nil,500],
 						["optic_MRCO",nil,500],
+						["bipod_01_f_snd",nil,2000],
+						["bipod_02_F_hex",nil,2000],
+						["bipod_03_F_blk",nil,2000],
+						["optic_AMS_base",nil,2750],
+						["optic_KHS_base",nil,2750],
 						["muzzle_snds_H",nil,500],
 						["muzzle_snds_L",nil,500],
 						["muzzle_snds_M",nil,500],
@@ -149,6 +159,11 @@ switch(_shop) do
 						["optic_SOS",nil,500],
 						["muzzle_snds_H_MG",nil,10000],
 						["optic_Arco",nil,500],
+						["bipod_01_f_snd",nil,2000],
+						["bipod_02_F_hex",nil,2000],
+						["bipod_03_F_blk",nil,2000],
+						["optic_AMS_base",nil,2750],
+						["optic_KHS_base",nil,2750],
 						["5Rnd_127x108_Mag",nil,500],
 						["5Rnd_127x108_APDS_Mag",nil,500],
 						["7Rnd_408_Mag",nil,500],
@@ -286,6 +301,11 @@ switch(_shop) do
 						["5Rnd_127x108_APDS_Mag","TruckStopper",30000],
 						["srifle_LRR_F",nil,1000000],
 						["7Rnd_408_Mag",nil,5000],
+						["bipod_01_f_snd",nil,2000],
+						["bipod_02_F_hex",nil,2000],
+						["bipod_03_F_blk",nil,2000],
+						["optic_AMS_base",nil,2750],
+						["optic_KHS_base",nil,2750],
 						["optic_SOS",nil,30000],
 						["optic_DMS",nil,30000],
 						["optic_NVS",nil,20000]
@@ -340,6 +360,11 @@ switch(_shop) do
 						["UGL_FlareWhite_F",nil,500],
 						["UGL_FlareGreen_F",nil,500],
 						["UGL_FlareRed_F",nil,500],
+						["bipod_01_f_snd",nil,2000],
+						["bipod_02_F_hex",nil,2000],
+						["bipod_03_F_blk",nil,2000],
+						["optic_AMS_base",nil,2750],
+						["optic_KHS_base",nil,2750],
 						["optic_Hamr",nil,10000],
 						["optic_Arco",nil,10000]
 					]
@@ -364,6 +389,11 @@ switch(_shop) do
 						["optic_Hamr",nil,10000],
 						["optic_Arco",nil,10000],
 						["LMG_Zafir_F",nil,2000000],
+						["bipod_01_f_snd",nil,2000],
+						["bipod_02_F_hex",nil,2000],
+						["bipod_03_F_blk",nil,2000],
+						["optic_AMS_base",nil,2750],
+						["optic_KHS_base",nil,2750],
                         ["150Rnd_762x51_Box_Tracer",nil,20000]
 					]
 				];
