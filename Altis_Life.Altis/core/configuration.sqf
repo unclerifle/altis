@@ -43,6 +43,8 @@ life_rebGrenade = false;
 life_rebGunner = false;
 life_rebChemical = false;
 
+life_fadeSound = false;
+
 //Persistent Saving
 __CONST__(life_save_civ,TRUE); //Save weapons for civs?
 __CONST__(life_save_yinv,TRUE); //Save Y-Inventory for players?

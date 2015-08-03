@@ -77,6 +77,14 @@
 	};
 };
 
+[] spawn {
+	while {true} do
+	{
+		enableSentences false;
+		sleep 20;
+	};
+};
+
 [] spawn  
 {
 	private["_walkDis","_myLastPos","_MaxWalk","_runHunger","_runDehydrate"];

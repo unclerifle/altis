@@ -204,7 +204,17 @@ switch (_code) do
 			};
 		};
 	};
-	//U Key
+	
+	//Shift+P = Faded Sound
+		case 25:
+			{
+				if(_shift) then
+			{
+        [] call life_fnc_fadeSound;
+        _handled = true;
+		};
+	};
+//U Key
 	case 22:
 	{
 		if(!_alt && !_ctrlKey) then {

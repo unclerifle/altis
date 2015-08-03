@@ -11098,7 +11098,7 @@ class Mission
 		{
 			position[]={10603.172,-183.52,28359.535};
 			name="drop";
-			text="dropdeadgaming.com";
+			text="http://inandaround.com.au/";
 			type="mil_flag";
 			colorName="ColorWhite";
 		};
