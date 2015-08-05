@@ -20,7 +20,7 @@ switch (_filter) do
 	case 0:
 	{
 		_ret set[count _ret,["U_Rangemaster","IAA Uniform",25]];
-		//[] call life_fnc_copUniform;
+		[] call life_fnc_copUniform;
 		if(__GETC__(life_coplevel) > 1) then
 		{
 			_ret set[count _ret,["U_B_CombatUniform_mcam_tshirt",nil,350]];

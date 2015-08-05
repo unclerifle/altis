@@ -6,7 +6,7 @@
 	Opens and initializes the clothing store menu.
 	Started clean, finished messy.
 */
-//#define __GETC__(var) (call var)
+#define __GETC__(var) (call var)
 private["_list","_clothes","_pic","_filter","_var"];
 createDialog "Life_Clothing";
 disableSerialization;
@@ -68,7 +68,7 @@ if(isNil "life_clothesPurchased") exitWith
 {
 	life_clothing_purchase = [-1,-1,-1,-1,-1];
 	if(life_oldClothes != "") then {player addUniform life_oldClothes;} else {removeUniform player};
-	//[] call life_fnc_copUniform;
+	[] call life_fnc_copUniform;
 	if(life_oldHat != "") then {player addHeadgear life_oldHat} else {removeHeadgear player;};
 	if(life_oldGlasses != "") then {player addGoggles life_oldGlasses;} else {removeGoggles player};
 	if(backpack player != "") then
@@ -119,7 +119,7 @@ if((life_clothing_purchase select 0) == -1) then
 {
 	if(life_oldClothes != uniform player) then {player addUniform life_oldClothes;};
 	
-	//[] call life_fnc_copUniform;
+	[] call life_fnc_copUniform;
 };
 //Check hat
 if((life_clothing_purchase select 1) == -1) then
